@@ -1,4 +1,10 @@
+MAKEFLAGS += -j4
+
 default: deploy
+
+# Make sure we are on the main branch and that the repository
+# is clean (i.e., contains no uncommited changes) before deploying
+# the website
 
 .PHONY: deploy-check-git
 .ONESHELL:
